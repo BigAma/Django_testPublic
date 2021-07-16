@@ -1,0 +1,13 @@
+
+{% extends 'layouts/base.html'%}
+
+{% block content %}
+    <h1>{{ question.question_label }}</h1>
+    <p>{{ question }}</p>
+    <p></p>
+    <p>{{ question.question_text }}</p>
+    <p>{{ question.question_pubdate }}</p>
+    <hr>
+    <p>{{ count }}</p>
+    <p><a href="{% url 'index' %}">--Revenir au question</a></p>
+{% endblock %}

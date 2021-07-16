@@ -1,0 +1,18 @@
+{% extends 'layouts/base.html'%}
+
+{% block content %}
+    <h1>Blog Home Page</h1>
+    <p>Bienvenue sur le site web trop bien de BigAma, vous regardez mes question existensielle </p>
+    <h2>Listes de questions existencielles : Il y a {{ questions|length }} questions</h2>
+    <div class="questions">
+        {% for question in questions %}
+            <div class="question">
+                <ul>
+                    <li>
+                        <h3><a href="/blog/{{ question.question_label | lower }}">{{ question.question_label }}</a></h3>
+                    </li>
+                </ul>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
