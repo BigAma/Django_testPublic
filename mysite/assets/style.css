@@ -1,18 +1,14 @@
 body {
-    background: orange;
+    background: aliceblue;
 }
 
 h1,p,h2 {
     padding-left: 30px;
 }
 
-.question {
-    background: #FAEBD7;
-    border-style: dotted ;
-    padding-top: 5px;
-    margin: 10px;
-}
 
-.question:hover {
-    background-color: gold;
+/* nav */
+
+.nav {
+    background-color: orange;
 }

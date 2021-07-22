@@ -1,8 +1,9 @@
 {% block nav %}
-    <ul>
-        <li><a href="{% url 'homepage' %}">Home</a></li>
-        <li><a href="{% url 'index' %}">Blog</a></li>
-        <li><a href="">About</a></li>
-    </ul>
+     <div class="topnav">
+        <a class="active" href="{% url 'homepage' %}">Home</a>
+        <a href="{% url 'index' %}">Blog</a>
+        <a href="#">Contact</a>
+        <a href="#">About</a>
+      </div> 
 
 {% endblock %}

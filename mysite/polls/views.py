@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Question
+from .models import Question, Choice
 
 
 # Create your views here.
@@ -9,5 +9,6 @@ def index(request):
 
 
 def question_page(request, question_label):
+    # question_label correspond a l'entree url pour la question choisie
     question_trouver = Question.objects.get(question_label__iexact=question_label)
     return render(request, 'question.html', {'question': question_trouver})
