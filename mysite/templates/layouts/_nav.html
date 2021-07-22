@@ -1,9 +1,10 @@
 {% block nav %}
      <div class="topnav">
         <a class="active" href="{% url 'homepage' %}">Home</a>
-        <a href="{% url 'index' %}">Blog</a>
-        <a href="#">Contact</a>
-        <a href="#">About</a>
+        <a href="{% url 'blog:index' %}">Blog</a>
+        <a href="{% url 'contact' %}">Contact</a>
+        <a class="login" href="{% url 'account:login' %}">Login</a>
+        <a class="signup" href="{% url 'account:signup' %}">Signup</a>
       </div> 
 
 {% endblock %}

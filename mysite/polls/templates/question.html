@@ -5,11 +5,10 @@
 {% block content %}
     <h1>{{ question.question_label }}</h1>
     <p>{{ question }}</p>
-    <p></p>
     <p>{{ question.question_text }}</p>
     <p>{{ question.question_pubdate }}</p>
     <hr>
-    <p><a href="{% url 'index' %}">--Revenir au question</a></p>
+    <p><a href="{% url 'blog:index' %}">--Revenir au question</a></p>
     <hr>
 
 {% endblock %}
