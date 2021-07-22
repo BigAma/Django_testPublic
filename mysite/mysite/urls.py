@@ -21,9 +21,12 @@ from . import views
 
 urlpatterns = [
     path('__debug__/', include(debug_toolbar.urls)),
+
     path('admin/', admin.site.urls),
+    path('', views.homepage, name='homepage'),
+    path('contact/', views.contactpage, name='contact'),
     path('blog/', include('polls.urls')),
-    path('', views.homepage, name='homepage')
+    path('accounts/', include('account.urls')),
 ]
 
 urlpatterns += staticfiles_urlpatterns()
