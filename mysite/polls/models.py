@@ -1,3 +1,4 @@
+from django.contrib.auth.models import User
 from django.db import models
 from django.utils import timezone
 
@@ -5,6 +6,7 @@ from django.utils import timezone
 
 
 class Question(models.Model):
+    auteur = models.ForeignKey(User, default=None, on_delete=models.CASCADE)
     question_label = models.CharField(max_length=100)
     question_text = models.TextField(max_length=600)
     question_pubdate = models.DateTimeField(auto_now_add=timezone.now(), blank=True)
