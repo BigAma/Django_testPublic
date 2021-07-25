@@ -1,0 +1,13 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %}Blog{% endblock %}
+
+{% block content %}
+    <div class="creerquestion">
+        <form class="question-form" action="{% url 'blog:create' %}" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form }}
+            <input type="submit" value="Creer">
+        </form>
+    </div>
+{% endblock %}
